@@ -24,8 +24,8 @@ import javax.jws.WebParam;
 public class DataBase {
     
     private Connection c;
-    private final String user = "adminTcGUFwz";
-    private final String pass = "KlsHSIxMwTAA";
+    private final String user = "***USERNAME***";
+    private final String pass = "***PASSWORD***";
     
     private void iniciaConexao() {
         try {
@@ -34,7 +34,7 @@ public class DataBase {
             Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
-            this.c = DriverManager.getConnection("jdbc:mysql://127.3.70.2:3306/droidserver", user, pass);
+            this.c = DriverManager.getConnection("jdbc:mysql://ip:port/dbname", user, pass);
         } catch (SQLException ex) {
             Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
         }
